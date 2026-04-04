@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+
+  <main class="app">
+    <div class="app__wrapper">
+
+      <!-- Header -->
+      <header class="header">
+        <h1 class="header__title">TODO</h1>
+        <button class="header__theme-toggle" aria-label="Toggle theme" tabindex="0">
+          <img class="header__themeImage" src="images/icon-moon.svg" alt="Toggle theme">
+        </button>
+      </header>
+
+      <!-- New Task Input -->
+      <div class="taskBarInput">
+        <div class="taskBarInput__checkButton"></div>
+        <form class="taskBarForm" id="taskForm" autocomplete="off">
+          <input
+            class="taskInputBar__input"
+            id="taskInput"
+            type="text"
+            placeholder="Create a new todo..."
+            aria-label="New todo input"
+          />
+          <input class="taskInputBar__inputSubmit" type="submit" />
+        </form>
+      </div>
+
+      <!-- Tasks List -->
+      <div class="tasksContainer" id="tasksContainer">
+        <ul class="tasksContainer__list" id="taskList">
+          <!-- Tasks injected by JS -->
+        </ul>
+
+        <div class="tasksContainer__footer" id="tasksFooter">
+          <span class="tasksContainer__itemsLeft" id="itemsLeft">0 items left</span>
+          <div class="taskContainer__filter" id="filterButtons">
+            <button class="taskContainer__filterButton active" data-filter="all" tabindex="0">All</button>
+            <button class="taskContainer__filterButton" data-filter="active" tabindex="0">Active</button>
+            <button class="taskContainer__filterButton" data-filter="completed" tabindex="0">Completed</button>
+          </div>
+          <button class="tasksContainer__clearCompleted" id="clearCompleted" tabindex="0">Clear Completed</button>
+        </div>
+      </div>
+
+      <!-- Mobile Filter Bar -->
+      <div class="mobileFilterBar" id="mobileFilter">
+        <button class="taskContainer__filterButton active" data-filter="all" tabindex="0">All</button>
+        <button class="taskContainer__filterButton" data-filter="active" tabindex="0">Active</button>
+        <button class="taskContainer__filterButton" data-filter="completed" tabindex="0">Completed</button>
+      </div>
+
+      <p class="drag-hint">Drag and drop to reorder list</p>
+
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Marwan AlBadri</a>.
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
